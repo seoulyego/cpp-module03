@@ -1,0 +1,6 @@
+.DS_Store
+.vscode/
+.obj/
+.cache/
+compile_commands.json
+clap_trap
