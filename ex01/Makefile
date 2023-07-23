@@ -1,5 +1,5 @@
-NAME				:=	clap_trap
-PROJECT_NAME		:=	CLAP_TRAP
+NAME				:=	scav_trap
+PROJECT_NAME		:=	SCAV_TRAP
 
 OBJ_DIR				:=	./.obj/
 CACHE_DIR			:=	./.cache/
