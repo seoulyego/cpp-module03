@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 
-ClapTrap::ClapTrap(void) {
+ClapTrap::ClapTrap() {
 	this->name = "default";
 	this->HitPoints = 10;
 	this->EnergyPoints = 10;

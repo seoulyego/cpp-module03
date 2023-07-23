@@ -2,20 +2,20 @@
 #include <string>
 #include <iostream>
 
-ScavTrap::ScavTrap(void) {
+ScavTrap::ScavTrap() {
 	this->name = "default";
-	this->HitPoints = 10;
-	this->EnergyPoints = 10;
-	this->AttackDamage = 0;
+	this->HitPoints = 100;
+	this->EnergyPoints = 50;
+	this->AttackDamage = 20;
 
 	std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) {
 	this->name = name;
-	this->HitPoints = 10;
-	this->EnergyPoints = 10;
-	this->AttackDamage = 0;
+	this->HitPoints = 100;
+	this->EnergyPoints = 50;
+	this->AttackDamage = 20;
 
 	std::cout << "ScavTrap " << name << " constructor called" << std::endl;
 }
@@ -49,19 +49,7 @@ void	ScavTrap::attack(const std::string& target) {
 	this->EnergyPoints--;
 }
 
-void	ScavTrap::takeDamage(unsigned int amount) {
-	if (amount > this->HitPoints) {
-		this->HitPoints = 0;
-		std::cout << "ScavTrap " << this->name << " is died" << std::endl;
-	}
-	else {
-		this->HitPoints -= amount;
-		std::cout << "ScavTrap " << this->name << " takes damage " << amount << std::endl;
-	}
-}
-
-void	ScavTrap::beRepaired(unsigned int amount) {
-	this->HitPoints += amount;
+void	ScavTrap::guardGate() {
+	std::cout << "ScavTrap " << this->name << "is now in Gate keeper mode" << std::endl;
 	this->EnergyPoints--;
-	std::cout << "ScavTrap " << this->name << " is repaired itself. HP: " << this->HitPoints << std::endl;
 }
