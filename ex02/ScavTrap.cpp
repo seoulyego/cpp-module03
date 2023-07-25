@@ -74,10 +74,6 @@ void	ScavTrap::beRepaired(unsigned int amount) {
 	}
 }
 
-unsigned int	ScavTrap::getDamage() {
-	return this->AttackDamage;
-}
-
 void	ScavTrap::guardGate() {
 	std::cout << "ScavTrap " << this->name << " is now in Gate keeper mode" << std::endl;
 }
