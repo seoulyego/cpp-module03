@@ -53,27 +53,6 @@ void	FragTrap::attack(const std::string& target) {
 	}
 }
 
-void	FragTrap::takeDamage(unsigned int amount) {
-	if (amount > this->HitPoints) {
-		this->HitPoints = 0;
-		std::cout << "FragTrap " << this->name << " is died" << std::endl;
-	}
-	else {
-		this->HitPoints -= amount;
-		std::cout << "FragTrap " << this->name << " takes damage " << amount << " (HP: " << this->HitPoints << ")" << std::endl;
-	}
-}
-
-void	FragTrap::beRepaired(unsigned int amount) {
-	if (this->HitPoints == 0 || this->EnergyPoints == 0)
-		std::cout << "FragTrap " << this->name << " can't do anything" << std::endl;
-	else {
-		this->HitPoints += amount;
-		this->EnergyPoints--;
-		std::cout << "FragTrap " << this->name << " is repaired itself " << amount << " (HP: " << this->HitPoints << ")" << std::endl;
-	}
-}
-
 void	FragTrap::highFivesGuys() {
 	std::cout << "FragTrap " << this->name << " high five!" << std::endl;
 }

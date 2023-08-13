@@ -18,9 +18,9 @@ class ClapTrap {
 		virtual ~ClapTrap();
 
 		virtual void	attack(const std::string& target);
-		virtual void	takeDamage(unsigned int amount);
-		virtual void	beRepaired(unsigned int amount);
-		virtual unsigned int	getDamage();
+		void			takeDamage(unsigned int amount);
+		void			beRepaired(unsigned int amount);
+		unsigned int	getDamage();
 };
 
 #endif  // CLAP_TRAP_HPP
