@@ -4,15 +4,14 @@
 
 int	main(void)
 {
-	ClapTrap	*interface = 0;
 	ClapTrap	a("A");
 	ScavTrap	b("B");
 	FragTrap	c("C");
+	ClapTrap	*interface = new ScavTrap;
 
 	a.attack("B");
 	b.takeDamage(a.getDamage());
 	b.beRepaired(3);
-	interface = &b;
 	interface->attack("C");
 	c.takeDamage(interface->getDamage());
 	c.beRepaired(10);
@@ -20,5 +19,6 @@ int	main(void)
 	c.attack("A");
 	a.takeDamage(c.getDamage());
 	c.highFivesGuys();
+	delete interface;
 	return 0;
 }
